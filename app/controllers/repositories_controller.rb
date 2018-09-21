@@ -16,6 +16,7 @@ class RepositoriesController < ApplicationController
     else
       @error = 'Search Error - ' + search_hash['meta']['status']
     end
+    render 'search'
   end
 
   private
