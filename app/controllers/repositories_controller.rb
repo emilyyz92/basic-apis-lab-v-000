@@ -12,7 +12,6 @@ class RepositoriesController < ApplicationController
     end
     search_hash = JSON.parse(@resp.body)
     if @resp.success?
-      binding.pry
       @items = search_hash['items']
     else
       @error = 'Search Error - ' + @resp.status
