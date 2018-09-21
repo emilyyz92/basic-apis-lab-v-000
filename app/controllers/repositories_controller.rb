@@ -15,7 +15,7 @@ class RepositoriesController < ApplicationController
       binding.pry
       @items = search_hash['items']
     else
-      @error = 'Search Error - ' + search_hash['meta']['status']
+      @error = 'Search Error - ' + @resp.status
     end
     render 'search'
   end
